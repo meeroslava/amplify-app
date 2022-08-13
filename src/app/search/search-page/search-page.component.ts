@@ -24,6 +24,5 @@ export class SearchPageComponent implements OnInit {
     this.hotels = await DataStore.query(Hotel, (q) =>
       q.searchName('contains', this.searchInput.toLowerCase())
     );
-    console.log('hotels', this.hotels);
   }
 }
