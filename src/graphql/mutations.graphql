@@ -1,0 +1,325 @@
+# this is an auto generated file. This will be overwritten
+mutation CreateReservation(
+  $input: CreateReservationInput!
+  $condition: ModelReservationConditionInput
+) {
+  createReservation(input: $input, condition: $condition) {
+    id
+    dateIn
+    dateOut
+    Room {
+      id
+      type
+      amount
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      roomHotelId
+    }
+    Client {
+      id
+      name
+      email
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    Hotel {
+      id
+      name
+      address
+      picture
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    reservationRoomId
+    reservationClientId
+    reservationHotelId
+  }
+}
+mutation UpdateReservation(
+  $input: UpdateReservationInput!
+  $condition: ModelReservationConditionInput
+) {
+  updateReservation(input: $input, condition: $condition) {
+    id
+    dateIn
+    dateOut
+    Room {
+      id
+      type
+      amount
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      roomHotelId
+    }
+    Client {
+      id
+      name
+      email
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    Hotel {
+      id
+      name
+      address
+      picture
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    reservationRoomId
+    reservationClientId
+    reservationHotelId
+  }
+}
+mutation DeleteReservation(
+  $input: DeleteReservationInput!
+  $condition: ModelReservationConditionInput
+) {
+  deleteReservation(input: $input, condition: $condition) {
+    id
+    dateIn
+    dateOut
+    Room {
+      id
+      type
+      amount
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      roomHotelId
+    }
+    Client {
+      id
+      name
+      email
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    Hotel {
+      id
+      name
+      address
+      picture
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    reservationRoomId
+    reservationClientId
+    reservationHotelId
+  }
+}
+mutation CreateClient(
+  $input: CreateClientInput!
+  $condition: ModelClientConditionInput
+) {
+  createClient(input: $input, condition: $condition) {
+    id
+    name
+    email
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+mutation UpdateClient(
+  $input: UpdateClientInput!
+  $condition: ModelClientConditionInput
+) {
+  updateClient(input: $input, condition: $condition) {
+    id
+    name
+    email
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+mutation DeleteClient(
+  $input: DeleteClientInput!
+  $condition: ModelClientConditionInput
+) {
+  deleteClient(input: $input, condition: $condition) {
+    id
+    name
+    email
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+mutation CreateRoom(
+  $input: CreateRoomInput!
+  $condition: ModelRoomConditionInput
+) {
+  createRoom(input: $input, condition: $condition) {
+    id
+    type
+    amount
+    Hotel {
+      id
+      name
+      address
+      picture
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    roomHotelId
+  }
+}
+mutation UpdateRoom(
+  $input: UpdateRoomInput!
+  $condition: ModelRoomConditionInput
+) {
+  updateRoom(input: $input, condition: $condition) {
+    id
+    type
+    amount
+    Hotel {
+      id
+      name
+      address
+      picture
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    roomHotelId
+  }
+}
+mutation DeleteRoom(
+  $input: DeleteRoomInput!
+  $condition: ModelRoomConditionInput
+) {
+  deleteRoom(input: $input, condition: $condition) {
+    id
+    type
+    amount
+    Hotel {
+      id
+      name
+      address
+      picture
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    roomHotelId
+  }
+}
+mutation CreateHotel(
+  $input: CreateHotelInput!
+  $condition: ModelHotelConditionInput
+) {
+  createHotel(input: $input, condition: $condition) {
+    id
+    name
+    address
+    picture
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+mutation UpdateHotel(
+  $input: UpdateHotelInput!
+  $condition: ModelHotelConditionInput
+) {
+  updateHotel(input: $input, condition: $condition) {
+    id
+    name
+    address
+    picture
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+mutation DeleteHotel(
+  $input: DeleteHotelInput!
+  $condition: ModelHotelConditionInput
+) {
+  deleteHotel(input: $input, condition: $condition) {
+    id
+    name
+    address
+    picture
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}

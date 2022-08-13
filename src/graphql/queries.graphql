@@ -1,0 +1,291 @@
+# this is an auto generated file. This will be overwritten
+query GetReservation($id: ID!) {
+  getReservation(id: $id) {
+    id
+    dateIn
+    dateOut
+    Room {
+      id
+      type
+      amount
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      roomHotelId
+    }
+    Client {
+      id
+      name
+      email
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    Hotel {
+      id
+      name
+      address
+      picture
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    reservationRoomId
+    reservationClientId
+    reservationHotelId
+  }
+}
+query ListReservations(
+  $filter: ModelReservationFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listReservations(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      dateIn
+      dateOut
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      reservationRoomId
+      reservationClientId
+      reservationHotelId
+    }
+    nextToken
+    startedAt
+  }
+}
+query SyncReservations(
+  $filter: ModelReservationFilterInput
+  $limit: Int
+  $nextToken: String
+  $lastSync: AWSTimestamp
+) {
+  syncReservations(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    lastSync: $lastSync
+  ) {
+    items {
+      id
+      dateIn
+      dateOut
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      reservationRoomId
+      reservationClientId
+      reservationHotelId
+    }
+    nextToken
+    startedAt
+  }
+}
+query GetClient($id: ID!) {
+  getClient(id: $id) {
+    id
+    name
+    email
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+query ListClients(
+  $filter: ModelClientFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listClients(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      name
+      email
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query SyncClients(
+  $filter: ModelClientFilterInput
+  $limit: Int
+  $nextToken: String
+  $lastSync: AWSTimestamp
+) {
+  syncClients(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    lastSync: $lastSync
+  ) {
+    items {
+      id
+      name
+      email
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query GetRoom($id: ID!) {
+  getRoom(id: $id) {
+    id
+    type
+    amount
+    Hotel {
+      id
+      name
+      address
+      picture
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    roomHotelId
+  }
+}
+query ListRooms(
+  $filter: ModelRoomFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listRooms(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      type
+      amount
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      roomHotelId
+    }
+    nextToken
+    startedAt
+  }
+}
+query SyncRooms(
+  $filter: ModelRoomFilterInput
+  $limit: Int
+  $nextToken: String
+  $lastSync: AWSTimestamp
+) {
+  syncRooms(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    lastSync: $lastSync
+  ) {
+    items {
+      id
+      type
+      amount
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      roomHotelId
+    }
+    nextToken
+    startedAt
+  }
+}
+query GetHotel($id: ID!) {
+  getHotel(id: $id) {
+    id
+    name
+    address
+    picture
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+query ListHotels(
+  $filter: ModelHotelFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listHotels(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      name
+      address
+      picture
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query SyncHotels(
+  $filter: ModelHotelFilterInput
+  $limit: Int
+  $nextToken: String
+  $lastSync: AWSTimestamp
+) {
+  syncHotels(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    lastSync: $lastSync
+  ) {
+    items {
+      id
+      name
+      address
+      picture
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    nextToken
+    startedAt
+  }
+}

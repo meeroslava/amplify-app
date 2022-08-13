@@ -1,0 +1,15 @@
+<form class="form">
+    <mat-form-field appearance="outline">
+        <mat-label>Hotel name</mat-label>
+        <input matInput placeholder="Hotel name" [(ngModel)]="hotel.name" name="name">
+    </mat-form-field> 
+    <mat-form-field appearance="outline">
+        <mat-label>Hotel address</mat-label>
+        <input matInput placeholder="Hotel address" [(ngModel)]="hotel.address" name="address">
+    </mat-form-field> 
+    <mat-form-field appearance="outline">
+        <mat-label>Hotel picture url</mat-label>
+        <input matInput placeholder="Url of the hotel picture" [(ngModel)]="hotel.picture" name="picture">
+    </mat-form-field> 
+    <button class="button" mat-button color="primary" (click)="createHotel()">Create</button>
+</form>

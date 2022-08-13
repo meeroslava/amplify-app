@@ -1,0 +1,30 @@
+type Reservation @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  dateIn: AWSTimestamp!
+  dateOut: AWSTimestamp!
+  Room: Room @hasOne
+  Client: Client @hasOne
+  Hotel: Hotel @hasOne
+}
+
+type Client @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  name: String!
+  email: AWSEmail!
+}
+
+type Room @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  type: String!
+  amount: Int!
+  Hotel: Hotel @hasOne
+}
+
+type Hotel @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  name: String!
+  address: String!
+  picture: String!
+  searchName: String!
+}
+ 

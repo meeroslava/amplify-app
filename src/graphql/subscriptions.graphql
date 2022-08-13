@@ -1,0 +1,295 @@
+# this is an auto generated file. This will be overwritten
+subscription OnCreateReservation(
+  $filter: ModelSubscriptionReservationFilterInput
+) {
+  onCreateReservation(filter: $filter) {
+    id
+    dateIn
+    dateOut
+    Room {
+      id
+      type
+      amount
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      roomHotelId
+    }
+    Client {
+      id
+      name
+      email
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    Hotel {
+      id
+      name
+      address
+      picture
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    reservationRoomId
+    reservationClientId
+    reservationHotelId
+  }
+}
+subscription OnUpdateReservation(
+  $filter: ModelSubscriptionReservationFilterInput
+) {
+  onUpdateReservation(filter: $filter) {
+    id
+    dateIn
+    dateOut
+    Room {
+      id
+      type
+      amount
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      roomHotelId
+    }
+    Client {
+      id
+      name
+      email
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    Hotel {
+      id
+      name
+      address
+      picture
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    reservationRoomId
+    reservationClientId
+    reservationHotelId
+  }
+}
+subscription OnDeleteReservation(
+  $filter: ModelSubscriptionReservationFilterInput
+) {
+  onDeleteReservation(filter: $filter) {
+    id
+    dateIn
+    dateOut
+    Room {
+      id
+      type
+      amount
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      roomHotelId
+    }
+    Client {
+      id
+      name
+      email
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    Hotel {
+      id
+      name
+      address
+      picture
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    reservationRoomId
+    reservationClientId
+    reservationHotelId
+  }
+}
+subscription OnCreateClient($filter: ModelSubscriptionClientFilterInput) {
+  onCreateClient(filter: $filter) {
+    id
+    name
+    email
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+subscription OnUpdateClient($filter: ModelSubscriptionClientFilterInput) {
+  onUpdateClient(filter: $filter) {
+    id
+    name
+    email
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+subscription OnDeleteClient($filter: ModelSubscriptionClientFilterInput) {
+  onDeleteClient(filter: $filter) {
+    id
+    name
+    email
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+subscription OnCreateRoom($filter: ModelSubscriptionRoomFilterInput) {
+  onCreateRoom(filter: $filter) {
+    id
+    type
+    amount
+    Hotel {
+      id
+      name
+      address
+      picture
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    roomHotelId
+  }
+}
+subscription OnUpdateRoom($filter: ModelSubscriptionRoomFilterInput) {
+  onUpdateRoom(filter: $filter) {
+    id
+    type
+    amount
+    Hotel {
+      id
+      name
+      address
+      picture
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    roomHotelId
+  }
+}
+subscription OnDeleteRoom($filter: ModelSubscriptionRoomFilterInput) {
+  onDeleteRoom(filter: $filter) {
+    id
+    type
+    amount
+    Hotel {
+      id
+      name
+      address
+      picture
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    roomHotelId
+  }
+}
+subscription OnCreateHotel($filter: ModelSubscriptionHotelFilterInput) {
+  onCreateHotel(filter: $filter) {
+    id
+    name
+    address
+    picture
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+subscription OnUpdateHotel($filter: ModelSubscriptionHotelFilterInput) {
+  onUpdateHotel(filter: $filter) {
+    id
+    name
+    address
+    picture
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+subscription OnDeleteHotel($filter: ModelSubscriptionHotelFilterInput) {
+  onDeleteHotel(filter: $filter) {
+    id
+    name
+    address
+    picture
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}

@@ -1,0 +1,10 @@
+<div class="map-wrapper">
+  <google-map [center]="center" [zoom]="14" width="75vw" height="75vh">
+    <map-marker
+      *ngFor="let hotel of hotelsGeo"
+      [position]="hotel.position"
+      [title]="hotel.hotel"
+      [label]="hotel.hotel"
+    ></map-marker>
+  </google-map>
+</div>

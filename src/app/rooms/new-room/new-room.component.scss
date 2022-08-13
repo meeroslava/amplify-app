@@ -1,0 +1,14 @@
+.page-container {
+  width: 550px;
+  .list-item {
+    padding-bottom: 10px;
+  }
+
+  .form-card {
+    margin-top: 10px;
+    .form {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

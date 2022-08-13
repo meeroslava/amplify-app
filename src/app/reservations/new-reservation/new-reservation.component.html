@@ -1,0 +1,117 @@
+<mat-card class="card">
+  <mat-card-title>Hotel & Client</mat-card-title>
+  <form class="form hotel">
+    <mat-form-field class="form-full-width hotel" appearance="fill">
+      <mat-label>Choose hotel</mat-label>
+      <input
+        type="text"
+        placeholder="Pick one"
+        aria-label="Hotel name"
+        matInput
+        [formControl]="myHotelControl"
+        [matAutocomplete]="autoHotels"
+        name="hotel"
+      />
+      <mat-autocomplete #autoHotels="matAutocomplete">
+        <mat-option
+          *ngFor="let hotel of filteredHotelOptions | async"
+          [value]="hotel.name"
+        >
+          {{ hotel.name }}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+  </form>
+  <form class="form client">
+    <mat-form-field class="form-full-width client" appearance="fill">
+      <mat-label>Choose client</mat-label>
+      <input
+        type="text"
+        placeholder="Pick one"
+        aria-label="Client name"
+        matInput
+        [formControl]="myClientControl"
+        [matAutocomplete]="autoClients"
+      />
+      <mat-autocomplete #autoClients="matAutocomplete">
+        <mat-option
+          *ngFor="let client of filteredClientOptions | async"
+          [value]="client.name"
+        >
+          {{ client.name }}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+  </form>
+  <button mat-raised-button color="primary" (click)="showRooms()">
+    Show room list
+  </button>
+</mat-card>
+
+<mat-card class="card" *ngIf="showRoomsList">
+  <mat-card-title>Choose room</mat-card-title>
+  <mat-selection-list
+    #filteredRooms
+    [(ngModel)]="selectedRoom"
+    [multiple]="false"
+  >
+    <mat-list-option *ngFor="let room of roomsList" value="room">{{
+      room.type
+    }}</mat-list-option>
+  </mat-selection-list>
+</mat-card>
+
+<mat-card class="card" *ngIf="showRoomsList">
+  <mat-card-title>Choose dates</mat-card-title>
+  <form>
+    <mat-form-field appearance="fill" class="form">
+      <mat-label>Choose a date of check-in</mat-label>
+      <input
+        matInput
+        [min]="minDate"
+        [matDatepicker]="datepickerIn"
+        [(ngModel)]="dates.checkIn"
+        name="checkIn"
+      />
+      <mat-hint>DD/MM/YYYY</mat-hint>
+      <mat-datepicker-toggle
+        matSuffix
+        [for]="datepickerIn"
+      ></mat-datepicker-toggle>
+      <mat-datepicker #datepickerIn>
+        <mat-datepicker-actions>
+          <button mat-button matDatepickerCancel>Cancel</button>
+          <button mat-raised-button color="primary" matDatepickerApply>
+            Apply
+          </button>
+        </mat-datepicker-actions>
+      </mat-datepicker>
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="form">
+      <mat-label>Choose a date of check-out</mat-label>
+      <input
+        matInput
+        [min]="minDate"
+        [matDatepicker]="datepickerOut"
+        [(ngModel)]="dates.checkOut"
+        name="checkOut"
+      />
+      <mat-hint>DD/MM/YYYY</mat-hint>
+      <mat-datepicker-toggle
+        matSuffix
+        [for]="datepickerOut"
+      ></mat-datepicker-toggle>
+      <mat-datepicker #datepickerOut>
+        <mat-datepicker-actions>
+          <button mat-button matDatepickerCancel>Cancel</button>
+          <button mat-raised-button color="primary" matDatepickerApply>
+            Apply
+          </button>
+        </mat-datepicker-actions>
+      </mat-datepicker>
+    </mat-form-field>
+  </form>
+  <button mat-raised-button color="primary" (click)="addReservation()">
+    Make a reservation
+  </button>
+</mat-card>

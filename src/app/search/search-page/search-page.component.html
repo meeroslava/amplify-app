@@ -1,0 +1,42 @@
+<form class="form">
+  <mat-form-field class="example-form-field" appearance="fill">
+    <mat-label>Search hotels by name</mat-label>
+    <input
+      class="input"
+      matInput
+      type="text"
+      [(ngModel)]="searchInput"
+      name="input"
+    />
+    <button
+      *ngIf="searchInput"
+      matSuffix
+      mat-icon-button
+      color="primary"
+      (click)="searchInput = ''; search('')"
+    >
+      <mat-icon>close</mat-icon>
+    </button>
+    <button
+      mat-icon-button
+      matSuffix
+      color="primary"
+      (click)="search(searchInput)"
+    >
+      <mat-icon>search</mat-icon>
+    </button>
+  </mat-form-field>
+</form>
+
+<mat-grid-list class="grid-list" cols="3" [gutterSize]="'10'">
+  <mat-grid-tile *ngFor="let hotel of hotels">
+    <mat-card class="card">
+      <mat-card-header class="card-header">
+        <mat-card-title class="card-title">{{ hotel.name }}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <img mat-card-image src="{{ hotel.picture }}" />
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>

@@ -1,0 +1,18 @@
+projects:
+  Hotelsreservationadmin-staging:
+    schemaPath: src/graphql/schema.json
+    includes:
+      - src/graphql/**/*.graphql
+    excludes:
+      - ./amplify/**
+    extensions:
+      amplify:
+        codeGenTarget: angular
+        generatedFileName: src/app/API.service.ts
+        docsFilePath: src/graphql
+        region: eu-west-2
+        apiId: kwafbcdk3fdurjy3fer7jef6ru
+        maxDepth: 2
+extensions:
+  amplify:
+    version: 3
