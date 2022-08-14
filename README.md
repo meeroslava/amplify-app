@@ -1,4 +1,5 @@
 # AmplifyApp
+Demo - https://master.d280pv4tfiozj0.amplifyapp.com/
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.1.
 
