@@ -20,7 +20,7 @@
                 <mat-label>Amount of rooms</mat-label>
                 <input matInput placeholder="Amount of rooms" [(ngModel)]="room.amount" name="amount">
             </mat-form-field>      
-            <button class="button" mat-button color="primary" (click)="createRoom(hotelsList.selectedOptions.selected[0].value)">Add rooms</button> 
+            <button class="button"  mat-raised-button color="primary" (click)="createRoom(hotelsList.selectedOptions.selected[0].value)">Add rooms</button> 
         </form>
     </mat-card>
 </div>

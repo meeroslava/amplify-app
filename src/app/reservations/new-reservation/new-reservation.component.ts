@@ -16,6 +16,8 @@ import * as moment from 'moment';
   templateUrl: './new-reservation.component.html',
   styleUrls: ['./new-reservation.component.scss'],
 })
+
+// TODO refactor this class 
 export class NewReservationComponent implements OnInit {
   minDate: Date;
   myHotelControl = new FormControl('');
